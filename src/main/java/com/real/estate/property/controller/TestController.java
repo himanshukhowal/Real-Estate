@@ -24,7 +24,7 @@ public class TestController {
 			throws Exception {
 		log.info("Testing Controller Executed only when user have access to Admin role on keycloak.");
 		return ResponseHandler.generateResponse(SuccessResponseEnum.SUCCESS_GET.getResponseMessage(), request,
-				SuccessResponseEnum.SUCCESS_GET.getResponseCode(), null);
+				SuccessResponseEnum.SUCCESS_GET.getResponseCode(), jwt.getClaims());
 	}
 
 }
